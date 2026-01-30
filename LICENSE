@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2026 Binary Options Trading Simulator Contributors
+Copyright (c) 2026 Solomon Mwangi
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,19 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-DISCLAIMER:
-
-This software is for educational purposes only. Binary options trading involves
-significant financial risk. The authors and contributors of this software:
-
-1. Do NOT provide financial advice
-2. Do NOT guarantee profitable trading outcomes
-3. Are NOT responsible for any financial losses
-4. Recommend consulting qualified financial advisors before trading
-
-Use this software at your own risk. Past performance does not guarantee future
-results. Trading with real money should only be done after thorough testing and
-understanding of the risks involved.
