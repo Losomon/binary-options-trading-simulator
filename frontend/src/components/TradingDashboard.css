@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;600&display=swap');
+
+.cp-dashboard {
+  font-family: 'Rajdhani', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  color: #e6f7ff;
+  padding: 1.5rem;
+}
+
+.cp-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cp-logo {
+  font-family: 'Orbitron', monospace;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #fff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 0 0 8px rgba(0,255,213,0.12), 0 0 16px rgba(255,49,184,0.06);
+}
+
+.glitch {
+  position: relative;
+}
+.glitch::before,
+.glitch::after {
+  content: attr(class);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  color: transparent;
+  text-shadow: -2px 0 #00ffd5, 2px 0 #ff31b8;
+  clip-path: inset(0 0 70% 0);
+  opacity: 0.85;
+  transform: translate3d(0,0,0);
+}
+
+.cp-sub { color: #98f7ff66; font-size: 0.85rem }
+
+.cp-main {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 1rem;
+  align-items: start;
+}
+
+.cp-chart-card {
+  background: linear-gradient(180deg, rgba(10,10,12,0.6), rgba(10,10,12,0.4));
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6), 0 0 30px rgba(0,255,213,0.02);
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+.cp-chart-header { display:flex; justify-content:space-between; align-items:center; gap:1rem; margin-bottom:0.75rem }
+.cp-price { font-family: 'Orbitron', monospace; font-size:1.75rem; color: #00ffd5 }
+
+.cp-actions { display:flex; gap:0.5rem }
+.btn { padding:0.6rem 0.9rem; border-radius:8px; border:none; cursor:pointer; font-weight:600 }
+.btn.call { background: linear-gradient(90deg,#00ffd5,#00bfa8); color:#052018 }
+.btn.put { background: linear-gradient(90deg,#ff31b8,#b72a8f); color:#2b0717 }
+.btn:disabled { opacity:0.6; cursor:not-allowed }
+
+.cp-chart { width:100%; height:180px; display:block; background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent); border-radius:8px; overflow:hidden }
+.cp-footer-note { margin-top:0.6rem; color:#9fefffa1; font-size:0.85rem }
+
+.cp-right { display:flex; flex-direction:column; gap:0.75rem }
+.cp-panel { background: linear-gradient(180deg, rgba(14,14,18,0.6), rgba(10,10,12,0.5)); padding:0.8rem; border-radius:8px; border:1px solid rgba(255,255,255,0.02) }
+.panel-title { font-weight:700; color:#c8ffff; margin-bottom:0.5rem }
+.panel-list { max-height:340px; overflow:auto; display:flex; flex-direction:column; gap:0.4rem }
+.trade-row { display:grid; grid-template-columns: 1fr 1fr 1fr; padding:0.55rem; border-radius:6px; background:linear-gradient(90deg, rgba(255,255,255,0.01), transparent); align-items:center }
+.trade-row.win { box-shadow: inset 0 0 0 2px rgba(0,255,213,0.06); border-left:4px solid rgba(0,255,213,0.28) }
+.trade-row.loss { box-shadow: inset 0 0 0 2px rgba(255,49,184,0.04); border-left:4px solid rgba(255,49,184,0.28) }
+.trade-dir { font-weight:700 }
+.trade-entry { color:#bfeff7 }
+.trade-result { text-align:right; font-weight:700 }
+.empty { color:#8df0ff66; padding:0.6rem }
+
+.small .stats { display:flex; gap:1rem; font-size:0.95rem }
+
+/* Responsive */
+@media (max-width:900px) {
+  .cp-main { grid-template-columns: 1fr }
+}
