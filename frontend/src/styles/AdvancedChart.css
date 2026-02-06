@@ -1,0 +1,225 @@
+/* Uses shared CSS variables from TradingDashboard.css */
+
+.advanced-chart-container {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+}
+
+.chart-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.control-group {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.control-label {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-right: 0.5rem;
+}
+
+.price-readout {
+  font-family: 'Orbitron', monospace;
+  color: var(--neon-cyan);
+  font-weight: 700;
+}
+
+.timeframe-btn,
+.chart-type-btn {
+  padding: 0.5rem 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.timeframe-btn:first-child {
+  border-radius: 6px 0 0 6px;
+}
+
+.timeframe-btn:last-child {
+  border-radius: 0 6px 6px 0;
+}
+
+.timeframe-btn.active,
+.chart-type-btn.active {
+  background: rgba(0, 255, 255, 0.2);
+  border-color: var(--neon-cyan);
+  color: var(--neon-cyan);
+}
+
+.chart-type-btn {
+  border-radius: 6px;
+  margin-right: 0.25rem;
+}
+
+.indicator-pills {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.indicator-pill {
+  padding: 0.4rem 0.8rem;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.indicator-pill.active {
+  background: rgba(0, 255, 255, 0.2);
+  border-color: var(--neon-cyan);
+  color: var(--neon-cyan);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+.indicator-pill:hover {
+  border-color: var(--neon-cyan);
+}
+
+.chart-wrapper {
+  position: relative;
+  height: 350px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.chart-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.price-axis {
+  position: absolute;
+  right: 0;
+  top: 1rem;
+  bottom: 1rem;
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.price-tick {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-family: 'Orbitron', monospace;
+  text-align: right;
+}
+
+.time-axis {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  margin-top: 0.5rem;
+}
+
+.time-tick {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-family: 'Orbitron', monospace;
+}
+
+.candle-stick {
+  transition: opacity 0.2s ease;
+}
+
+.candle-stick:hover {
+  opacity: 0.7;
+}
+
+.chart-legend {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.legend-color {
+  width: 20px;
+  height: 3px;
+  border-radius: 2px;
+}
+
+.legend-label {
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.rsi-indicator {
+  height: 100px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1rem;
+  position: relative;
+}
+
+.rsi-title {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.rsi-zones {
+  position: absolute;
+  top: 2rem;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+}
+
+.rsi-zone {
+  position: absolute;
+  width: 100%;
+  border-top: 1px dashed rgba(255, 255, 255, 0.2);
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  padding-left: 0.5rem;
+}
+
+@media (max-width: 900px) {
+  .chart-wrapper {
+    height: 280px;
+  }
+}
